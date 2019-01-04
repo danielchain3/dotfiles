@@ -1,1 +1,7 @@
-.gitconfig
+[user]
+	name = Daniel Chain
+	email = DanielChain3@gmail.com
+[color]
+	ui = auto
+[core]
+	excludesfile = /Users/danielchain/.gitignore_global
