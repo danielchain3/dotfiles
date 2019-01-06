@@ -1,0 +1,19 @@
+add_venv_info () {
+    if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" ] ; then
+        _OLD_VIRTUAL_PS1="$PS1"
+        if [ "x" != x ] ; then
+            PS1="$PS1"
+        else
+            if [ "`basename \"$VIRTUAL_ENV\"`" = "__" ] ; then
+                # special case for Aspen magic directories
+                # see http://www.zetadev.com/software/aspen/
+                PS1="[`basename \`dirname \"$VIRTUAL_ENV\"\``] $PS1"
+            elif [ "$VIRTUAL_ENV" != "" ]; then
+                PS1="(`basename \"$VIRTUAL_ENV\"`)$PS1"
+            fi
+        fi
+        export PS1
+    fi
+}
+PROMPT_COMMAND=add_venv_info
+PROMPT_DIRTRIM=2
